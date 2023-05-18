@@ -1,26 +1,255 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    border: solid;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-image: url("mybackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    background-attachment: fixed;
 }
 
-.flex-container > div {
-    width: 100%;
-    margin: 10px;
+footer {
     text-align: center;
-    line-height: 50px;
+}
+
+div.entirePage {
+    color: white;
+}
+
+h1 {
+    font-size: 50px;
+    color: black;
+}
+
+#headera {
+    margin: 15px;
+    width: 70%;
+    text-align: center;
+    padding: 30px;
+    border-style: solid;
+    border-color: black;
+    background-color: orange;
+}
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+    padding: 5px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+    .flex-container > div {
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+    }
+
+* {
+    box-sizing: border-box;
+}
+
+.smallflex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+}
+
+.flex-item-left {
+    padding: 10px;
+    flex: 33%;
+    font-size: 14px;
+    text-align: left;
+    border: solid;
+    border-color: white;
+}
+
+.flex-item-center {
+    padding: 10px;
+    flex: 33%;
+    font-size: 14px;
+    text-align: left;
+    border: solid;
+    border-color: white;
+}
+
+.flex-item-right {
+    padding: 10px;
+    flex: 33%;
+    font-size: 14px;
+    text-align: left;
+    border: solid;
+    border-color: white;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+    .flex-container {
+        flex-direction: row;
+    }
+}
+
+.button {
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: blue;
+}
+
+.board {
+    position: relative;
+    z-index: 2;
+}
+
+.LT1 {
+    position: relative;
+    z-index: 1;
+    top: -440px;
+    left: 170px;
+}
+
+.LT2 {
+    position: relative;
+    z-index: 1;
+    top: -440px;
+    left: 254px;
+}
+
+.LT3 {
+    position: relative;
+    z-index: 1;
+    top: -440px;
+    left: 330px;
+}
+
+.LT4 {
+    position: relative;
+    z-index: 1;
+    top: -275px;
+    left: -85px;
+}
+
+.LT5 {
+    position: relative;
+    z-index: 1;
+    top: -275px;
+    left: 0px;
+}
+
+.LT6 {
+    position: relative;
+    z-index: 1;
+    top: -275px;
+    left: 75px;
+}
+
+.LT7 {
+    position: relative;
+    z-index: 1;
+    top: -110px;
+    left: -337px;
+}
+
+.LT8 {
+    position: relative;
+    z-index: 1;
+    top: -110px;
+    left: -252px;
+}
+
+.LT9 {
+    position: relative;
+    z-index: 1;
+    top: -110px;
+    left: -175px;
+}
+
+.resbut {
+    position: relative;
+    z-index: 1;
+    top: -525px;
+    left: 400px;
+}
+
+
+
+/* CSS Code */
+/* Heading */
+
+
+/* 3*3 Grid */
+#b1, #b2, #b3, #b4, #b5,
+#b6, #b7, #b8, #b9 {
+    width: 80px;
+    height: 52px;
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 6px;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+}
+
+/* Reset Button */
+#but {
+    box-sizing: border-box;
+    width: 95px;
+    height: 40px;
+    border: 1px solid dodgerblue;
+    margin: auto;
+    border-radius: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: dodgerblue;
+    color: black;
     font-size: 20px;
+    cursor: pointer;
+}
+
+/* Player turn space */
+#print {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: dodgerblue;
+    font-size: 30px;
+}
+
+/* Main Container */
+#main {
+    text-align: center;
+}
+
+/* Game Instruction Text */
+#ins {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-size: 17px;
 }
